@@ -1,4 +1,7 @@
-$("#carouselButton").click(function(){
+
+$("#mycarousel").carousel( { interval: 2000 } );
+
+$("#carouselButton").on("click",function(){
     if ($("#carouselButton").children("span").hasClass('fa-pause')) {
         $("#mycarousel").carousel('pause');
         $("#carouselButton").children("span").removeClass('fa-pause');
@@ -9,4 +12,12 @@ $("#carouselButton").click(function(){
         $("#carouselButton").children("span").removeClass('fa-play');
         $("#carouselButton").children("span").addClass('fa-pause');                    
     }
+});
+
+$("#reserveTableBtn").on("click",function(){
+    $("#reserveModal").modal();
+});
+
+$("#loginBtn").on("click",function(){
+    $("#loginModal").modal();
 });
